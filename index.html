@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NeoGuard AI Offline</title>
+
+    <link rel="manifest" href="./manifest.json" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>🛡️ NeoGuard AI</h1>
+      <p class="subtitle">Offline Neonatal Risk Prediction System</p>
+
+      <div class="card">
+        <input id="age" placeholder="Mother Age" type="number" />
+        <input id="birthweight" placeholder="Birth Weight (g)" type="number" />
+        <input id="anc" placeholder="ANC Visits" type="number" />
+
+        <select id="delivery">
+          <option value="Home">Home</option>
+          <option value="PHC">PHC</option>
+          <option value="Hospital">Hospital</option>
+        </select>
+
+        <select id="multiple">
+          <option value="No">Single Birth</option>
+          <option value="Yes">Multiple Birth</option>
+        </select>
+
+        <button onclick="predict()">Predict Risk</button>
+
+        <div id="result" class="result-box"></div>
+      </div>
+    </div>
+
+    <script src="model.js"></script>
+    <script src="app1.js"></script>
+  </body>
+</html>
